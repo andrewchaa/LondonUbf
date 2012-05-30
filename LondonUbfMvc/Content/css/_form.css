@@ -1,0 +1,25 @@
+﻿.fld
+{
+    margin: 1em;
+    overflow: hidden;
+}
+.fldLabel
+{
+    width: 20%;
+    float: left;
+}
+.fldInput
+{
+    width: 80%;
+    float: left;
+}
+
+.list th
+{
+	text-align:left;
+}
+
+.date
+{
+    width: 65px;
+}
