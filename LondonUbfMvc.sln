@@ -1,10 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LondonUbfWeb.Test", "LondonUbfMvc.Tests\LondonUbfWeb.Test.csproj", "{255BB598-DEDB-4280-A569-24EC013035D8}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LondonUbfWeb", "LondonUbfMvc\LondonUbfWeb.csproj", "{2708645E-442B-4FD0-BEA4-62E4B543A451}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LondonUbf", "LondonUbf\LondonUbf.csproj", "{4FD022EB-F92A-4B85-A986-73DAA6F5B4AF}"
 EndProject
 Global
@@ -13,14 +9,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{255BB598-DEDB-4280-A569-24EC013035D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{255BB598-DEDB-4280-A569-24EC013035D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{255BB598-DEDB-4280-A569-24EC013035D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{255BB598-DEDB-4280-A569-24EC013035D8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2708645E-442B-4FD0-BEA4-62E4B543A451}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2708645E-442B-4FD0-BEA4-62E4B543A451}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2708645E-442B-4FD0-BEA4-62E4B543A451}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2708645E-442B-4FD0-BEA4-62E4B543A451}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4FD022EB-F92A-4B85-A986-73DAA6F5B4AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4FD022EB-F92A-4B85-A986-73DAA6F5B4AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4FD022EB-F92A-4B85-A986-73DAA6F5B4AF}.Release|Any CPU.ActiveCfg = Release|Any CPU

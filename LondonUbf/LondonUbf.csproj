@@ -82,6 +82,7 @@
     <Content Include="Content\images\favicon.ico" />
     <Content Include="Content\images\glyphicons-halflings-white.png" />
     <Content Include="Content\images\glyphicons-halflings.png" />
+    <Content Include="Content\images\sky.jpg" />
     <Content Include="Content\scripts\bootstrap-alert.js" />
     <Content Include="Content\scripts\bootstrap-button.js" />
     <Content Include="Content\scripts\bootstrap-carousel.js" />
