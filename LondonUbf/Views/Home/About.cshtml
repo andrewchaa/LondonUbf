@@ -2,7 +2,46 @@
     ViewBag.Title = "About Us";
 }
 
-<h2>About</h2>
-<p>
-     Put content here.
-</p>
+@section Navigation
+{
+  <div class="nav-collapse">
+    <ul class="nav">
+      <li><a href="/">Home</a></li>
+      <li class="active"><a href='@Url.Action("About", "Home")'>About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div><!--/.nav-collapse -->
+}
+
+
+<!-- Main hero unit for a primary marketing message or call to action -->
+<div class="page-header"><h1>London University Bible Fellowship</h1></div>
+<div class="row">
+    <div class="span6">
+        We study the Bible with young people and helps them to live according to the teachings of the Scriptures and to practice the world mission command of Jesus (Acts 1:8).
+    </div>
+</div>
+
+<div class="page-header"><h2>Service time</h2></div>
+<div class="row">
+    <div class="span6">
+        <table class="table">
+            <thead><tr><th>Service</th><th>Time</th></tr></thead>    
+            <tbody>
+                <tr><td>Children's service</td><td>10:30 AM</td></tr>
+                <tr><td>Main service</td><td>2 PM</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<br />
+
+<div class="page-header"><h2>Venue</h2></div>
+<p>Address: 2nd Floor, Archway Central Hall, Archway Close, London, N19 3TD, United Kingdom.<br>Tel: +44(0)207 263 2355</p>
+<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
+        src="http://maps.google.co.uk/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Archway+Central+Hall,+Archway+Close&amp;aq=&amp;sll=51.456987,-0.098572&amp;sspn=0.245157,0.617294&amp;ie=UTF8&amp;hq=&amp;hnear=Archway+Central+Hall,+Archway+Rd,+Archway+Close,+London+N19+3TD,+United+Kingdom&amp;ll=51.5651,-0.134894&amp;spn=0.007643,0.01929&amp;z=14&amp;output=embed">
+</iframe>
+<br />
+<small>
+    <a href="http://maps.google.co.uk/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Archway+Central+Hall,+Archway+Close&amp;aq=&amp;sll=51.456987,-0.098572&amp;sspn=0.245157,0.617294&amp;ie=UTF8&amp;hq=&amp;hnear=Archway+Central+Hall,+Archway+Rd,+Archway+Close,+London+N19+3TD,+United+Kingdom&amp;ll=51.5651,-0.134894&amp;spn=0.007643,0.01929&amp;z=16" style="color:#0000FF;text-align:left">View Larger Map</a>
+</small>
