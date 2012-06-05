@@ -23,7 +23,7 @@ namespace LondonUbf.Domain
                            Year = int.Parse(match.Groups["Year"].Value),
                            Book = match.Groups["Book"].Value,
                            LectureNo = int.Parse(match.Groups["LectureNo"].Value),
-                           Chapter = match.Groups["Chapter"].Value,
+                           Chapter = match.Groups["Chapter"].Value.Replace('.', ':'),
                            Title = match.Groups["Title"].Value,
                            FileName = fileName
                        };

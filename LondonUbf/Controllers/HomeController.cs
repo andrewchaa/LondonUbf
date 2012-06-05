@@ -1,8 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using LondonUbf.Domain;
+using LondonUbf.Models;
 
 namespace LondonUbf.Controllers
 {
@@ -22,7 +23,10 @@ namespace LondonUbf.Controllers
 
         public ActionResult Messages()
         {
-            return View();
+            var repository = new MessageRepository(Server.MapPath("/Content/messages"));
+            var viewModel = new MessageViewModel { Messages = repository.FindAll()};
+
+            return View(viewModel);
         }
     }
 }

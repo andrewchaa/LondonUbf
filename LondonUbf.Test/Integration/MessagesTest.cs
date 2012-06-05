@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using LondonUbf.Domain;
 using NUnit.Framework;
-using System.IO;
 
 namespace LondonUbf.Test.Integration
 {
@@ -13,17 +12,22 @@ namespace LondonUbf.Test.Integration
         [Test]
         public void Should_List_Files_In_The_Message_Directory()
         {
-            var repository = new MessageRepository();
+            const string messagePath = @"..\..\..\LondonUbf\Content\messages";
+            var repository = new MessageRepository(messagePath);
             
+            var messages = repository.FindAll();
 
-            var directory = new DirectoryInfo(@"C:\Users\Andrew\Projects\LondonUbf\LondonUbf\Content\messages");
-            var files = directory.GetFiles();
-
-            Assert.That(files.First().Name, Is.EqualTo("2012 Genesis 1 1.1-1.25 In The Beginning.json"));
+            Assert.That(messages.First().FileName.Contains("\\2012 Genesis 1 1.1-1.25 In The Beginning.json"), Is.True);
+            Assert.That(messages.First().Book, Is.EqualTo("Genesis"));
         }
-    }
 
-    public class MessageRepository
-    {
+        [Test]
+        public void Chapter_Replace_Dot_To_Colon_To_Follow_The_Convention()
+        {
+            var message = ServiceMessage.From("\\2012 Genesis 1 1.1-1.25 In The Beginning.json");
+
+            Assert.That(message.Chapter, Is.EqualTo("1:1-1:25"));
+        }
+
     }
 }

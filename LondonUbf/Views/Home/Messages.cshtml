@@ -1,4 +1,4 @@
-﻿@*@model TModel*@
+﻿@model LondonUbf.Models.MessageViewModel
 
 @{
     ViewBag.Title = "Messages";
@@ -19,7 +19,6 @@
     .hero-unit h1, .hero-unit p {
         color: Olive;
     }
-    
 </style>
 
 <!-- Main hero unit for a primary marketing message or call to action -->
@@ -41,15 +40,15 @@
           <tr>
               <th>Book</th>
               <th>Lecture</th>
-              <th>Title</th>
+              <th>Chapter</th>
+              <th width="65%">Title</th>
           </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Genesis</td>
-                <td>1</td>
-                <td>Let there be light</td>
-            </tr>
+          @foreach (var message in Model.Messages)
+          {
+            <tr><td>@message.Book</td><td>@message.LectureNo</td><td>@message.Chapter</td><td>@message.Title</td></tr>
+          }
         </tbody>
       </table>        
     </div>
