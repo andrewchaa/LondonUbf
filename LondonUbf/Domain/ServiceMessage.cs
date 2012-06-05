@@ -15,7 +15,7 @@ namespace LondonUbf.Domain
 
         public static ServiceMessage From(string fileName)
         {
-            var pattern = new Regex(@"(?<Year>[0-9]+?)\s(?<Book>[0-9A-Za-z]+?)\s(?<LectureNo>[0-9]+?)\s(?<Chapter>[0-9.-]+?)\s(?<Title>.+?)\.json");
+            var pattern = new Regex(@"(?<Year>[0-9]+?)\s(?<Book>[0-9A-Za-z]+?)\s(?<LectureNo>[0-9]+?)\s(?<Chapter>[0-9.-]+?)\s(?<Title>.+?)\.js");
             var match = pattern.Match(fileName);
 
             return new ServiceMessage

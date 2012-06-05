@@ -11,14 +11,14 @@ namespace LondonUbf.Test.Unit
         [Test]
         public void Should_Populate_Properties_From_File_Name()
         {
-            const string fileName = "2012 Genesis 1 1.1-1.25 In The Beginning.json";
+            const string fileName = "2012 Genesis 1 1.1-1.25 In The Beginning.js";
 
             var message = ServiceMessage.From(fileName);
 
             Assert.That(message.Year, Is.EqualTo(2012));
             Assert.That(message.Book, Is.EqualTo("Genesis"));
             Assert.That(message.LectureNo, Is.EqualTo(1));
-            Assert.That(message.Chapter, Is.EqualTo("1.1-1.25"));
+            Assert.That(message.Chapter, Is.EqualTo("1:1-1:25"));
             Assert.That(message.Title, Is.EqualTo("In The Beginning"));
             Assert.That(message.FileName, Is.EqualTo(fileName));
         }
