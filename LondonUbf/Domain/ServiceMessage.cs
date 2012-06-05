@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Text.RegularExpressions;
 
 namespace LondonUbf.Domain
@@ -15,7 +15,7 @@ namespace LondonUbf.Domain
 
         public string ContentHtml
         {
-            get { return Content.Replace("\r\n", "<br />").Replace("\n", "<br />"); }
+            get { return Content.Replace("\r\n", "<br />").Replace("\n", "<br />").Replace("�", string.Empty); }
         }
 
         public static ServiceMessage From(string fileName)
