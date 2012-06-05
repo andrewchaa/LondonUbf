@@ -10,7 +10,7 @@
         <ul class="nav">
             <li><a href="/">Home</a></li>
             <li><a href='@Url.Action("About", "Home")'>About</a></li>
-            <li class="active"><a href='@Url.Action("Messages", "Home")'>Messages</a></li>
+            <li class="active"><a href='@Url.Action("Index", "Messages")'>Messages</a></li>
         </ul>
     </div>
 }
@@ -41,13 +41,18 @@
               <th>Book</th>
               <th>Lecture</th>
               <th>Chapter</th>
-              <th width="65%">Title</th>
+              <th width="75%">Title</th>
           </tr>
         </thead>
         <tbody>
           @foreach (var message in Model.Messages)
           {
-            <tr><td>@message.Book</td><td>@message.LectureNo</td><td>@message.Chapter</td><td>@message.Title</td></tr>
+            <tr>
+                <td>@message.Book</td>
+                <td>@message.LectureNo</td>
+                <td>@message.Chapter</td>
+                <td>@Html.ActionLink(message.Title, "Read", new { id = message.FileName })</td>
+            </tr>
           }
         </tbody>
       </table>        

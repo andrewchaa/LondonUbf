@@ -44,5 +44,23 @@ namespace LondonUbf.Test.Unit
 
         }
 
+        [Test]
+        public void Chapter_Replace_Dot_To_Colon_To_Follow_The_Convention()
+        {
+            var message = ServiceMessage.From("2012 Genesis 1 1.1-1.25 In The Beginning.js");
+
+            Assert.That(message.Chapter, Is.EqualTo("1:1-1:25"));
+        }
+
+        [Test]
+        public void Content_Newline_Gets_Converted_To_Html_Br()
+        {
+            var message = new ServiceMessage();
+            message.Content = "Test\r\n";
+
+            Assert.That(message.ContentHtml, Is.EqualTo("Test<br />"));
+        }
+
+
     }
 }

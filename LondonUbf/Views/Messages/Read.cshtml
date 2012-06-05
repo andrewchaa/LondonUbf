@@ -1,0 +1,27 @@
+﻿@model LondonUbf.Domain.ServiceMessage
+
+@{
+    ViewBag.Title = Model.Title;
+}
+
+<style>
+    .hero-unit h1, .hero-unit p { color: Olive; }
+</style>
+
+<div class="hero-unit" style="background-image:url(/Content/images/dove.jpg)">
+  <h1>Messages</h1>
+  <p>You can revisit all the message we have heard on the service.</p>
+</div>
+
+<table>
+    <thead>
+        <tr></tr>
+    </thead>
+</table>
+
+<div class="row">
+    <div class="span9">
+        @Html.Raw(Model.ContentHtml)
+    </div>
+</div>
+

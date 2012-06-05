@@ -21,12 +21,5 @@ namespace LondonUbf.Controllers
             return View();
         }
 
-        public ActionResult Messages()
-        {
-            var repository = new MessageRepository(Server.MapPath("/Content/messages"));
-            var viewModel = new MessageViewModel { Messages = repository.FindAll()};
-
-            return View(viewModel);
-        }
     }
 }

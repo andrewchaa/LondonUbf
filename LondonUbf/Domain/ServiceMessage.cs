@@ -13,6 +13,11 @@ namespace LondonUbf.Domain
         public string Content { get; set; }
         public string FileName { get; set; }
 
+        public string ContentHtml
+        {
+            get { return Content.Replace("\r\n", "<br />").Replace("\n", "<br />"); }
+        }
+
         public static ServiceMessage From(string fileName)
         {
             var pattern = new Regex(@"(?<Year>[0-9]+?)\s(?<Book>[0-9A-Za-z]+?)\s(?<LectureNo>[0-9]+?)\s(?<Chapter>[0-9.-]+?)\s(?<Title>.+?)\.js");
