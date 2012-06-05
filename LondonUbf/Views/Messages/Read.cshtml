@@ -1,7 +1,18 @@
 ﻿@model LondonUbf.Domain.ServiceMessage
 
 @{
-    ViewBag.Title = Model.Title;
+    ViewBag.Title = string.Format("{0} {1} {2}", Model.Book, Model.LectureNo, Model.Title);
+}
+
+@section Navigation
+{
+    <div class="nav-collapse">
+        <ul class="nav">
+            <li><a href="/">Home</a></li>
+            <li><a href='@Url.Action("About", "Home")'>About</a></li>
+            <li class="active"><a href='@Url.Action("Index", "Messages")'>Messages</a></li>
+        </ul>
+    </div>
 }
 
 <style>
@@ -13,15 +24,13 @@
   <p>You can revisit all the message we have heard on the service.</p>
 </div>
 
-<table>
-    <thead>
-        <tr></tr>
-    </thead>
-</table>
-
 <div class="row">
     <div class="span9">
-        @Html.Raw(Model.ContentHtml)
+        <p><a class="btn btn-primary btn-small" href="@Url.Action("Index")">Back to list</a></p>
+        
+        <p>@Html.Raw(Model.ContentHtml)</p>
+        
+        <p><a class="btn btn-primary btn-small" href="@Url.Action("Index")">Back to list</a></p>
     </div>
 </div>
 
