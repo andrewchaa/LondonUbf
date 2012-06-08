@@ -11,7 +11,7 @@ namespace LondonUbf.Test.Unit
         [Test]
         public void Should_Populate_Properties_From_File_Name()
         {
-            const string fileName = "2012 Genesis 1 1.1-1.25 In The Beginning.js";
+            const string fileName = "2012 Genesis 1 1.1-1.25 In The Beginning.html";
 
             var message = ServiceMessage.From(fileName);
 
@@ -47,7 +47,7 @@ namespace LondonUbf.Test.Unit
         [Test]
         public void Chapter_Replace_Dot_To_Colon_To_Follow_The_Convention()
         {
-            var message = ServiceMessage.From("2012 Genesis 1 1.1-1.25 In The Beginning.js");
+            var message = ServiceMessage.From("2012 Genesis 1 1.1-1.25 In The Beginning.html");
 
             Assert.That(message.Chapter, Is.EqualTo("1:1-1:25"));
         }
