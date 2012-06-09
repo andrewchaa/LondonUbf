@@ -1,5 +1,4 @@
-﻿using System;
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 
 namespace LondonUbf.Domain
 {
@@ -18,21 +17,5 @@ namespace LondonUbf.Domain
             get { return Content.Replace("\r\n", "<br />").Replace("\n", "<br />").Replace("�", string.Empty); }
         }
 
-        public static ServiceMessage From(string fileName)
-        {
-            var pattern = new Regex(@"(?<Year>[0-9]+?)\s(?<Book>[0-9A-Za-z]+?)\s(?<LectureNo>[0-9]+?)\s(?<Chapter>[0-9.-]+?)\s(?<Title>.+?)\.html");
-            var match = pattern.Match(fileName);
-
-            return new ServiceMessage
-                       {
-                           Year = int.Parse(match.Groups["Year"].Value),
-                           Book = match.Groups["Book"].Value,
-                           LectureNo = int.Parse(match.Groups["LectureNo"].Value),
-                           Chapter = match.Groups["Chapter"].Value.Replace('.', ':'),
-                           Title = match.Groups["Title"].Value,
-                           FileName = fileName
-                       };
-
-        }
     }
 }

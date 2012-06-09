@@ -15,7 +15,7 @@ namespace LondonUbf.Test.Integration
         [SetUp]
         public void BeforeEachTest()
         {
-            _repository = new MessageRepository(MessagePath);
+            _repository = new MessageRepository(new FileNameParser(), MessagePath);
         }
 
         [Test]

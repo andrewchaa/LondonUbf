@@ -10,7 +10,7 @@ namespace LondonUbf.Controllers
 
         public ActionResult Index()
         {
-            _messageRepository = new MessageRepository(Server.MapPath("/Content/messages"));
+            _messageRepository = new MessageRepository(new FileNameParser(), Server.MapPath("/Content/messages"));
             var viewModel = new MessageViewModel { Messages = _messageRepository.FindAll() };
 
             return View(viewModel);
@@ -18,7 +18,7 @@ namespace LondonUbf.Controllers
 
         public ActionResult Read(string id)
         {
-            _messageRepository = new MessageRepository(Server.MapPath("/Content/messages"));
+            _messageRepository = new MessageRepository(new FileNameParser(), Server.MapPath("/Content/messages"));
             var message = _messageRepository.Find(id);
            
             return View(message);

@@ -1,0 +1,42 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using LondonUbf.Domain;
+using NUnit.Framework;
+
+namespace LondonUbf.Test.Unit
+{
+    [TestFixture]
+    public class MessagingMetaDataParsingTest
+    {
+        private IMessageParser _parser;
+
+        [SetUp]
+        public void BeforeEachTest()
+        {
+            _parser = new FileContentParser();
+        }
+
+        [Test]
+        public void Should_Parse_Book_Name()
+        {
+            const string messageFileContent =
+                @"Luke 20                                                                                              
+
+YOUR KINGDOM COME
+
+Luke 11:1-13
+Key verse 11:2
+‘He said to them, When you pray, say: 'Father, hallowed be your name, your kingdom come.'’
+
+
+Prayer is communication with God. In this passage Jesus teaches us how to communicate with God. In particular he teaches us two things; what to include in our prayers and the correct attitude in prayer. God wants a father / child relationship with us and that he wants us to pray boldly for his glory, that his kingdom would come and for our needs. And when we bring all of these things together we learn that our prayer lives should be dynamic, powerful and refreshing. We should have prayer lives which reflect what God wants and have confidence that he will answer. I pray that through today’s message we refresh our prayer lives and build a deeper relationship with our father God.
+";
+
+            var message = _parser.Parse(messageFileContent);
+
+            Assert.That(message.Book, Is.EqualTo("Luke"));
+        }
+    }
+}

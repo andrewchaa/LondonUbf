@@ -8,12 +8,20 @@ namespace LondonUbf.Test.Unit
     [TestFixture]
     public class ServiceMessageTest
     {
+        private IMessageParser _parser;
+
+        [SetUp]
+        public void BeforeEachTest()
+        {
+            _parser = new FileNameParser();
+        }
+
         [Test]
         public void Should_Populate_Properties_From_File_Name()
         {
             const string fileName = "2012 Genesis 1 1.1-1.25 In The Beginning.html";
 
-            var message = ServiceMessage.From(fileName);
+            var message = _parser.Parse(fileName);
 
             Assert.That(message.Year, Is.EqualTo(2012));
             Assert.That(message.Book, Is.EqualTo("Genesis"));
@@ -47,7 +55,7 @@ namespace LondonUbf.Test.Unit
         [Test]
         public void Chapter_Replace_Dot_To_Colon_To_Follow_The_Convention()
         {
-            var message = ServiceMessage.From("2012 Genesis 1 1.1-1.25 In The Beginning.html");
+            var message = _parser.Parse("2012 Genesis 1 1.1-1.25 In The Beginning.html");
 
             Assert.That(message.Chapter, Is.EqualTo("1:1-1:25"));
         }
