@@ -70,7 +70,7 @@
     <Compile Include="Controllers\MessagesController.cs" />
     <Compile Include="Domain\FileContentParser.cs" />
     <Compile Include="Domain\IMessageParser.cs" />
-    <Compile Include="Domain\FilenameParser.cs" />
+    <Compile Include="Domain\FileNameParser.cs" />
     <Compile Include="Domain\MessageRepository.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
