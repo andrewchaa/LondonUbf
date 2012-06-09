@@ -13,14 +13,7 @@ namespace LondonUbf.Utils
 
         static void Main(string[] args)
         {
-            if (args.Count() == 0)
-            {
-                Console.WriteLine("Example: LondonUbf.Util.exe 2012");
-                return;
-            }
-
             _parser = new FileContentParser();
-            int year = int.Parse(args[0]);
 
             var files = new DirectoryInfo(@"c:\temp").GetFiles();
 
@@ -29,11 +22,21 @@ namespace LondonUbf.Utils
                 string content = File.ReadAllText(file.FullName);
 
                 var message = _parser.Parse(content);
+                if (message.Year == 0)
+                {
+                    File.WriteAllText("c:\\temp\\failed_" + file.Name, string.Empty);
+                    continue;
+                }
 
-                string fileName = string.Format("c:\\temp\\{0} {1} {2} {3} {4}", year, message.Book, message.LectureNo, 
-                    message.Chapter.Replace(':', '.'), message.Title);
-                File.WriteAllText(fileName, content);
+                WriteMesaageFile(content, message);
             }
+        }
+
+        private static void WriteMesaageFile(string content, ServiceMessage message)
+        {
+            string fileName = string.Format("c:\\temp\\{0} {1} {2} {3} {4}", message.Year, message.Book, message.LectureNo,
+                                            message.Chapter.Replace(':', '.'), message.Title);
+            File.WriteAllText(fileName, content);
         }
     }
 }
