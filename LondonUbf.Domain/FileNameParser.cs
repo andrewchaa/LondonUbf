@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+using System;
 using System.Text.RegularExpressions;
-using System.Web;
 
 namespace LondonUbf.Domain
 {
     public class FileNameParser : IMessageParser
     {
         private readonly Regex _pattern = 
-            new Regex(@"(?<Year>[0-9]+?)\s(?<Book>[0-9A-Za-z]+?)\s(?<LectureNo>[0-9]+?)\s(?<Chapter>[0-9.-]+?)\s(?<Title>.+?)\.html");
+            new Regex(@"(?<Year>[0-9]+?)\s(?<Book>[0-9A-Za-z]+?)\s(?<LectureNo>[0-9]+?)\s(?<Chapter>[0-9.-]+?)\s(?<Title>.+?)$");
 
         public ServiceMessage Parse(string fileName)
         {

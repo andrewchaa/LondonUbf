@@ -10,7 +10,7 @@ namespace LondonUbf.Test.Unit
     [TestFixture]
     public class MessagingMetaDataParsingTest
     {
-        private IMessageParser _parser;
+        private IMessageParser   _parser;
 
         [SetUp]
         public void BeforeEachTest()
@@ -19,7 +19,7 @@ namespace LondonUbf.Test.Unit
         }
 
         [Test]
-        public void Should_Parse_Book_Name()
+        public void Should_Parse_The_Content()
         {
             const string messageFileContent =
                 @"Luke 20                                                                                              
@@ -37,6 +37,9 @@ Prayer is communication with God. In this passage Jesus teaches us how to commun
             var message = _parser.Parse(messageFileContent);
 
             Assert.That(message.Book, Is.EqualTo("Luke"));
+            Assert.That(message.LectureNo, Is.EqualTo(20));
+            Assert.That(message.Title, Is.EqualTo("Your Kingdom Come"));
+            Assert.That(message.Chapter, Is.EqualTo("11:1-13"));
         }
     }
 }

@@ -1,6 +1,4 @@
-﻿using System.Text.RegularExpressions;
-
-namespace LondonUbf.Domain
+﻿namespace LondonUbf.Domain
 {
     public class ServiceMessage
     {

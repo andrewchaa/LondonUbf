@@ -68,15 +68,10 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MessagesController.cs" />
-    <Compile Include="Domain\FileContentParser.cs" />
-    <Compile Include="Domain\IMessageParser.cs" />
-    <Compile Include="Domain\FileNameParser.cs" />
-    <Compile Include="Domain\MessageRepository.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
-    <Compile Include="Domain\ServiceMessage.cs" />
     <Compile Include="Models\MessageViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -94,13 +89,13 @@
     <Content Include="Content\images\glyphicons-halflings-white.png" />
     <Content Include="Content\images\glyphicons-halflings.png" />
     <Content Include="Content\images\sky.jpg" />
-    <Content Include="Content\messages\2012 1John 1 1.1-1.10 You Also May Have Fellowship.html" />
-    <Content Include="Content\messages\2012 1John 2 2.1-2.29 Remain In The Teaching Of The Word.html" />
-    <Content Include="Content\messages\2012 1John 3 3.1-3.24 Love With Actions And In Truth.html" />
-    <Content Include="Content\messages\2012 1John 4 4.1-4.21 Let Us Love One Another.html" />
-    <Content Include="Content\messages\2012 1John 5 5.1-5.21 Faith That Overcomes The World.html" />
-    <Content Include="Content\messages\2012 2John 1 1.1-1.13 Walk In Love.html" />
-    <Content Include="Content\messages\2012 3John 1 1.1-1.15 Imitate What Is Good.html" />
+    <Content Include="Content\messages\2012 1John 1 1.1-1.10 You Also May Have Fellowship" />
+    <Content Include="Content\messages\2012 1John 2 2.1-2.29 Remain In The Teaching Of The Word" />
+    <Content Include="Content\messages\2012 1John 3 3.1-3.24 Love With Actions And In Truth" />
+    <Content Include="Content\messages\2012 1John 4 4.1-4.21 Let Us Love One Another" />
+    <Content Include="Content\messages\2012 1John 5 5.1-5.21 Faith That Overcomes The World" />
+    <Content Include="Content\messages\2012 2John 1 1.1-1.13 Walk In Love" />
+    <Content Include="Content\messages\2012 3John 1 1.1-1.15 Imitate What Is Good" />
     <Content Include="Content\scripts\bootstrap-alert.js" />
     <Content Include="Content\scripts\bootstrap-button.js" />
     <Content Include="Content\scripts\bootstrap-carousel.js" />
@@ -172,18 +167,24 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\messages\2012 Genesis 1 1.1-1.25 In The Beginning.html" />
-    <Content Include="Content\messages\2012 Genesis 2 1.26-2.3 God Created Man.html" />
-    <Content Include="Content\messages\2012 Genesis 3 2.4-2.25 God Planted a Garden.html" />
-    <Content Include="Content\messages\2012 Genesis 4 3.1-3.24 Where Are You.html" />
-    <Content Include="Content\messages\2012 Genesis 5 4.1-5.32 Sin Crouching At The Door.html" />
-    <Content Include="Content\messages\2012 Genesis 6 6.1-7.24 God Saves Noah.html" />
+    <Content Include="Content\messages\2012 Genesis 1 1.1-1.25 In The Beginning" />
+    <Content Include="Content\messages\2012 Genesis 2 1.26-2.3 God Created Man" />
+    <Content Include="Content\messages\2012 Genesis 3 2.4-2.25 God Planted a Garden" />
+    <Content Include="Content\messages\2012 Genesis 4 3.1-3.24 Where Are You" />
+    <Content Include="Content\messages\2012 Genesis 5 4.1-5.32 Sin Crouching At The Door" />
+    <Content Include="Content\messages\2012 Genesis 6 6.1-7.24 God Saves Noah" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Messages\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Messages\Read.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LondonUbf.Domain\LondonUbf.Domain.csproj">
+      <Project>{0C36ACF8-BBFB-45E9-A9CC-371539B170EA}</Project>
+      <Name>LondonUbf.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

@@ -25,12 +25,26 @@
 </div>
 
 <div class="row">
-    <div class="span9">
-        <p><a class="btn btn-primary btn-small" href="@Url.Action("Index")">Back to list</a></p>
-        
+    <div class="span10">
+        <p id="pBeginBtn">
+            <a class="btn btn-primary btn-small" href="@Url.Action("Index")">Back to list</a>
+            <a class="btn btn-warning btn-small" href="#" id="lnkPrint">Print</a>
+        </p>
+        <p>&nbsp;</p>
         <p>@Html.Raw(Model.ContentHtml)</p>
-        
-        <p><a class="btn btn-primary btn-small" href="@Url.Action("Index")">Back to list</a></p>
+        <p>&nbsp;</p>
+        <p id="pEndBtn"><a class="btn btn-primary btn-small" href="@Url.Action("Index")">Back to list</a></p>
     </div>
 </div>
+
+<script type="text/javascript">
+  $(function () {
+    $('#lnkPrint').click(function (e) {
+      $('.hero-unit, #divNavbar, #pBeginBtn, #pEndBtn').hide();
+      window.print();
+      $('.hero-unit, #divNavbar, #pBeginBtn, #pEndBtn').show();  
+    });
+  });
+
+</script>
 

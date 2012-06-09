@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LondonUbf.Test", "LondonUbf
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LondonUbf.Utils", "LondonUbf.Utils\LondonUbf.Utils.csproj", "{AA907EDB-8091-440E-8AE0-99F17FF63633}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LondonUbf.Domain", "LondonUbf.Domain\LondonUbf.Domain.csproj", "{0C36ACF8-BBFB-45E9-A9CC-371539B170EA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,16 @@ Global
 		{AA907EDB-8091-440E-8AE0-99F17FF63633}.Release|Mixed Platforms.Build.0 = Release|x86
 		{AA907EDB-8091-440E-8AE0-99F17FF63633}.Release|x86.ActiveCfg = Release|x86
 		{AA907EDB-8091-440E-8AE0-99F17FF63633}.Release|x86.Build.0 = Release|x86
+		{0C36ACF8-BBFB-45E9-A9CC-371539B170EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C36ACF8-BBFB-45E9-A9CC-371539B170EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C36ACF8-BBFB-45E9-A9CC-371539B170EA}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{0C36ACF8-BBFB-45E9-A9CC-371539B170EA}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{0C36ACF8-BBFB-45E9-A9CC-371539B170EA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0C36ACF8-BBFB-45E9-A9CC-371539B170EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C36ACF8-BBFB-45E9-A9CC-371539B170EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C36ACF8-BBFB-45E9-A9CC-371539B170EA}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0C36ACF8-BBFB-45E9-A9CC-371539B170EA}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{0C36ACF8-BBFB-45E9-A9CC-371539B170EA}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

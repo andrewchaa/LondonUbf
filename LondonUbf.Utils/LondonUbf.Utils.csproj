@@ -55,6 +55,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LondonUbf.Domain\LondonUbf.Domain.csproj">
+      <Project>{0C36ACF8-BBFB-45E9-A9CC-371539B170EA}</Project>
+      <Name>LondonUbf.Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LondonUbf\LondonUbf.csproj">
       <Project>{4FD022EB-F92A-4B85-A986-73DAA6F5B4AF}</Project>
       <Name>LondonUbf</Name>
