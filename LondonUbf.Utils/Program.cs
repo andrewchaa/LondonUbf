@@ -22,18 +22,18 @@ namespace LondonUbf.Utils
                 string content = File.ReadAllText(file.FullName);
 
                 var message = _parser.Parse(content);
-                if (message.Year == 0)
-                {
-                    File.WriteAllText("c:\\temp\\failed_" + file.Name, string.Empty);
-                    continue;
-                }
-
-                WriteMesaageFile(content, message);
+                WriteMesaageFile(message, content);
             }
         }
 
-        private static void WriteMesaageFile(string content, ServiceMessage message)
+        private static void WriteMesaageFile(ServiceMessage message, string content)
         {
+            if (string.IsNullOrEmpty(message.Book))
+                message.Book = "{Book}";
+
+            if (string.IsNullOrEmpty(message.Chapter))
+                message.Chapter = "{Chapter}";
+
             string fileName = string.Format("c:\\temp\\{0} {1} {2} {3} {4}", message.Year, message.Book, message.LectureNo,
                                             message.Chapter.Replace(':', '.'), message.Title);
             File.WriteAllText(fileName, content);
