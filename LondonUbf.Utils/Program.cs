@@ -34,9 +34,18 @@ namespace LondonUbf.Utils
             if (string.IsNullOrEmpty(message.Chapter))
                 message.Chapter = "{Chapter}";
 
+            if (string.IsNullOrEmpty(message.Title))
+                message.Title = "{Title}";
+
             string fileName = string.Format("c:\\temp\\{0} {1} {2} {3} {4}", message.Year, message.Book, message.LectureNo,
-                                            message.Chapter.Replace(':', '.'), message.Title);
+                                            CleanUpForFileName(message.Chapter), CleanUpForFileName(message.Title));
             File.WriteAllText(fileName, content);
+        }
+
+        private static string CleanUpForFileName(string input)
+        {
+            return input.Replace(':', '.').Replace("?", string.Empty).Replace("�", "'");
+
         }
     }
 }

@@ -186,6 +186,48 @@
       <Name>LondonUbf.Domain</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\messages\2011 Luke 1 2.21-52 Jesus%27 Early Years" />
+    <Content Include="Content\messages\2011 Luke 10 7.1-17 Young Man Get Up!" />
+    <Content Include="Content\messages\2011 Luke 11 7.18-50 Much Forgiveness, Much Love" />
+    <Content Include="Content\messages\2011 Luke 12 8.1-21 Hear The Word" />
+    <Content Include="Content\messages\2011 Luke 13 8.22-39 What Is Your Name" />
+    <Content Include="Content\messages\2011 Luke 14 8.40-56 Don%27T Be Afraid%3b Just Believe" />
+    <Content Include="Content\messages\2011 Luke 15 9.1-17 You Give Them Something To Eat" />
+    <Content Include="Content\messages\2011 Luke 16 9.18-27 The Christ Of God" />
+    <Content Include="Content\messages\2011 Luke 17 9.28-50 Listen To Him" />
+    <Content Include="Content\messages\2011 Luke 18 9.51-10.24 Send Out Workers Into The Harvest Field" />
+    <Content Include="Content\messages\2011 Luke 19 10.25-42 What Must I Do To Inherit Eternal Life" />
+    <Content Include="Content\messages\2011 Luke 2 3.1-38 Jesus Was Baptised" />
+    <Content Include="Content\messages\2011 Luke 20 11.1-13 Your Kingdom Come" />
+    <Content Include="Content\messages\2011 Luke 21 11.14-54 The Sign Of Jonah" />
+    <Content Include="Content\messages\2011 Luke 22 12.1-34 But Seek His Kingdom" />
+    <Content Include="Content\messages\2011 Luke 23 12.35-59 Faithful And Wise Manager" />
+    <Content Include="Content\messages\2011 Luke 24 13.1-35 Enter Through The Narrow Door" />
+    <Content Include="Content\messages\2011 Luke 25 14.1-35 Fill My House" />
+    <Content Include="Content\messages\2011 Luke 26 15.1-32 The Father%27S Great Love" />
+    <Content Include="Content\messages\2011 Luke 27 16.1-31 Wisdom To Use Worldly Wealth" />
+    <Content Include="Content\messages\2011 Luke 28 17.1-19 Faith As Small As A Mustard Seed" />
+    <Content Include="Content\messages\2011 Luke 29 17.20-37 The Son Of Man Will Come Like Lightning" />
+    <Content Include="Content\messages\2011 Luke 3 4.1-15 Jesus Overcame Satan%27S Temptation" />
+    <Content Include="Content\messages\2011 Luke 30 18.1-17 Always Pray And Do Not Give Up" />
+    <Content Include="Content\messages\2011 Luke 31 18.18-43 The Way To Eternal Life" />
+    <Content Include="Content\messages\2011 Luke 32 19.1-10 Jesus Came To Save The Lost" />
+    <Content Include="Content\messages\2011 Luke 33 19.11-27 Put This Money To Work" />
+    <Content Include="Content\messages\2011 Luke 34 19.28-48 The King Who Comes In The Name Of The Lord" />
+    <Content Include="Content\messages\2011 Luke 35 20.1-47 The Parable Of The Tenants" />
+    <Content Include="Content\messages\2011 Luke 36 21.1-38 Jesus Will Come With Great Glory" />
+    <Content Include="Content\messages\2011 Luke 37 22.1-23 New Covenant Of Blood" />
+    <Content Include="Content\messages\2011 Luke 38 22.24-71 Not My Will, But Yours Be Done" />
+    <Content Include="Content\messages\2011 Luke 39 23.1-56 Jesus Died On The Cross" />
+    <Content Include="Content\messages\2011 Luke 4 4.14-44 That Is Why I Was Sent" />
+    <Content Include="Content\messages\2011 Luke 40 24.1-53 You Are Witnesses Of All These" />
+    <Content Include="Content\messages\2011 Luke 5 5.1-11 You Will Catch Men" />
+    <Content Include="Content\messages\2011 Luke 6 5.12-26 Your Sins Are Forgiven" />
+    <Content Include="Content\messages\2011 Luke 7 5.27-39 Jesus Came To Call Sinners" />
+    <Content Include="Content\messages\2011 Luke 8 6.1-19 Whom He Also Designated Apostles" />
+    <Content Include="Content\messages\2011 Luke 9 6.20-49 Hear The Words And Put Them Into Practice" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
