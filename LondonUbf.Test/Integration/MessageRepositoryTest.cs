@@ -10,11 +10,11 @@ namespace LondonUbf.Test.Integration
     public class MessageRepositoryTest
     {
         private MessageRepository _repository;
-        private const string MessagePath = @"..\..\..\LondonUbf\Content\messages";
 
         [SetUp]
         public void BeforeEachTest()
         {
+            const string MessagePath = @"..\..\..\LondonUbf\Content\messages";
             _repository = new MessageRepository(new FileNameParser(), MessagePath);
         }
 
