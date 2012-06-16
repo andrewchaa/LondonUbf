@@ -10,15 +10,15 @@ namespace LondonUbf.Test.Integration
     public class MessageRepositoryTest
     {
         private MessageRepository _repository;
+        const string MessagePath = @"..\..\..\LondonUbf\Content\messages";
 
         [SetUp]
         public void BeforeEachTest()
         {
-            const string MessagePath = @"..\..\..\LondonUbf\Content\messages";
             _repository = new MessageRepository(new FileNameParser(), MessagePath);
         }
 
-        [Test]
+        [Test, Ignore]
         public void Should_List_Files_In_The_Message_Directory()
         {
             
@@ -27,7 +27,7 @@ namespace LondonUbf.Test.Integration
             Assert.That(messages.Count(), Is.GreaterThan(0));
         }
 
-        [Test]
+        [Test, Ignore]
         public void Should_Fine_A_Message_By_File_Name_As_Id()
         {
             var message = _repository.Find("2012 Genesis 1 1.1-1.25 In The Beginning");
