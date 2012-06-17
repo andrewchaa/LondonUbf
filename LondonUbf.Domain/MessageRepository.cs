@@ -1,9 +1,10 @@
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace LondonUbf.Domain
 {
-    public class MessageRepository
+    public class MessageRepository : IMessageRepository
     {
         private readonly IMessageParser _parser;
         private readonly string _messageDirectory;
@@ -28,7 +29,7 @@ namespace LondonUbf.Domain
                 messages.Add(message);
             }
 
-            return messages;
+            return messages.OrderBy(m => m.LectureNo).OrderBy(m => m.Book);
         }
 
         public ServiceMessage Find(string fileName)

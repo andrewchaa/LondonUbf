@@ -89,6 +89,7 @@
     <Compile Include="Infrastructure\WindsorControllerFactory.cs" />
     <Compile Include="Installers\ControllersInstaller.cs" />
     <Compile Include="Installers\LoggerInstaller.cs" />
+    <Compile Include="Installers\RepositoriesInstaller.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\MessageViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
