@@ -17,7 +17,9 @@ namespace LondonUbf.Infrastructure
         {
             try
             {
-                _logger.Log(string.Format("{0}.{1},  Message: {2} ", invocation.TargetType.Name, invocation.Method.Name, invocation.Arguments[0]));
+                string messageName = invocation.Arguments.Length > 0 ? invocation.Arguments[0].ToString() : string.Empty;
+
+                _logger.Log(string.Format("{0}.{1},  Message: {2} ", invocation.TargetType.Name, invocation.Method.Name, messageName));
                 invocation.Proceed();
             }
             catch(Exception ex)
