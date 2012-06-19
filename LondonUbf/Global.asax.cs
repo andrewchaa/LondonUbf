@@ -55,7 +55,7 @@ namespace LondonUbf
             var exception = Server.GetLastError();
 
             var logger = _container.Resolve<ILogger>();
-            logger.ErrorFormat("{0}: {1}{2}{3}{4}", DateTime.Now, exception.Message, Environment.NewLine, exception.StackTrace, Environment.NewLine);
+            logger.Error(string.Format("<p><strong>{0}: {1}</strong><br />{2}</p>", DateTime.Now, exception.Message, exception.StackTrace));
         }
 
         private static void BootstrapContainer()
