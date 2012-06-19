@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExceptionLogger.cs" />
     <Compile Include="FileContentParser.cs" />
     <Compile Include="FileNameParser.cs" />
     <Compile Include="IMessageParser.cs" />

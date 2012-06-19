@@ -5,6 +5,7 @@ using System.Web.Routing;
 using Castle.Core.Logging;
 using Castle.Windsor;
 using Castle.Windsor.Installer;
+using LondonUbf.Domain;
 using LondonUbf.Infrastructure;
 
 namespace LondonUbf
@@ -54,8 +55,8 @@ namespace LondonUbf
         {
             var exception = Server.GetLastError();
 
-            var logger = _container.Resolve<ILogger>();
-            logger.Error(string.Format("<p><strong>{0}: {1}</strong><br />{2}</p>", DateTime.Now, exception.Message, exception.StackTrace));
+            var logger = new ExceptionLogger(_container.Resolve<ILogger>());
+            logger.Log(exception);
         }
 
         private static void BootstrapContainer()
