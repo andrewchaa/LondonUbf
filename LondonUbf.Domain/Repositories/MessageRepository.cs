@@ -1,8 +1,9 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace LondonUbf.Domain
+namespace LondonUbf.Domain.Repositories
 {
     public class MessageRepository : IMessageRepository
     {
@@ -34,6 +35,9 @@ namespace LondonUbf.Domain
 
         public ServiceMessage Find(string fileName)
         {
+            if (string.IsNullOrEmpty(fileName))
+                throw new ArgumentNullException();
+
             var message = _parser.Parse(fileName);
             message.Content = File.ReadAllText(Path.Combine(_messageDirectory, fileName));
 

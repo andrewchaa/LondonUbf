@@ -1,6 +1,7 @@
 ﻿using System.Web.Mvc;
 using Castle.Core.Logging;
 using LondonUbf.Domain;
+using LondonUbf.Domain.Repositories;
 using LondonUbf.Models;
 
 namespace LondonUbf.Controllers

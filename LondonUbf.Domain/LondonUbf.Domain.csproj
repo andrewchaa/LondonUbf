@@ -50,8 +50,8 @@
     <Compile Include="FileContentParser.cs" />
     <Compile Include="FileNameParser.cs" />
     <Compile Include="IMessageParser.cs" />
-    <Compile Include="IMessageRepository.cs" />
-    <Compile Include="MessageRepository.cs" />
+    <Compile Include="Repositories\IMessageRepository.cs" />
+    <Compile Include="Repositories\MessageRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceMessage.cs" />
   </ItemGroup>

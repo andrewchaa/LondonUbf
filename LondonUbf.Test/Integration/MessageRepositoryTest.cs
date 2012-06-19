@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Text;
 using LondonUbf.Domain;
+using LondonUbf.Domain.Repositories;
 using NUnit.Framework;
 
 namespace LondonUbf.Test.Integration

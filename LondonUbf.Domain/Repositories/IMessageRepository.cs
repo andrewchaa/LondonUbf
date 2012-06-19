@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace LondonUbf.Domain
+namespace LondonUbf.Domain.Repositories
 {
     public interface IMessageRepository
     {
