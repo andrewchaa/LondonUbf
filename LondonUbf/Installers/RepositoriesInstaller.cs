@@ -20,7 +20,7 @@ namespace LondonUbf.Installers
             container.Register(Component.For<MessageRepositoryInterceptor>());
             container.Register(
                 Component.For<MessageRepository, IMessageRepository>()
-                .DependsOn(new { messageDirectory = HostingEnvironment.MapPath("/Content/messages")})
+                .DependsOn(new { messageDirectory = HostingEnvironment.MapPath("/content/messages")})
                 .Interceptors<MessageRepositoryInterceptor>()
                 );
         }
