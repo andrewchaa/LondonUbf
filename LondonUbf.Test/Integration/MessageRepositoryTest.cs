@@ -12,7 +12,7 @@ namespace LondonUbf.Test.Integration
     public class MessageRepositoryTest
     {
         private MessageRepository _repository;
-        const string _messagePath = @"..\..\Messages";
+        const string _messagePath = @"..\..\Integration\TestData";
 
 
         [SetUp]
