@@ -72,19 +72,45 @@
     <Compile Include="Unit\ServiceMessageTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Integration\TestData\2012 1John 1 1.1-1.10 You Also May Have Fellowship" />
-    <Content Include="Integration\TestData\2012 1John 2 2.1-2.29 Remain In The Teaching Of The Word" />
-    <Content Include="Integration\TestData\2012 1John 3 3.1-3.24 Love With Actions And In Truth" />
-    <Content Include="Integration\TestData\2012 1John 4 4.1-4.21 Let Us Love One Another" />
-    <Content Include="Integration\TestData\2012 1John 5 5.1-5.21 Faith That Overcomes The World" />
-    <Content Include="Integration\TestData\2012 2John 1 1.1-1.13 Walk In Love" />
-    <Content Include="Integration\TestData\2012 3John 1 1.1-1.15 Imitate What Is Good" />
-    <Content Include="Integration\TestData\2012 Genesis 1 1.1-1.25 In The Beginning" />
-    <Content Include="Integration\TestData\2012 Genesis 2 1.26-2.3 God Created Man" />
-    <Content Include="Integration\TestData\2012 Genesis 3 2.4-2.25 God Planted a Garden" />
-    <Content Include="Integration\TestData\2012 Genesis 4 3.1-3.24 Where Are You" />
-    <Content Include="Integration\TestData\2012 Genesis 5 4.1-5.32 Sin Crouching At The Door" />
-    <Content Include="Integration\TestData\2012 Genesis 6 6.1-7.24 God Saves Noah" />
+    <None Include="TestData\2012 1John 1 1.1-1.10 You Also May Have Fellowship">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\2012 1John 2 2.1-2.29 Remain In The Teaching Of The Word">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\2012 1John 3 3.1-3.24 Love With Actions And In Truth">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\2012 1John 4 4.1-4.21 Let Us Love One Another">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\2012 1John 5 5.1-5.21 Faith That Overcomes The World">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\2012 2John 1 1.1-1.13 Walk In Love">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\2012 3John 1 1.1-1.15 Imitate What Is Good">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\2012 Genesis 1 1.1-1.25 In The Beginning">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\2012 Genesis 2 1.26-2.3 God Created Man">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\2012 Genesis 3 2.4-2.25 God Planted a Garden">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\2012 Genesis 4 3.1-3.24 Where Are You">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\2012 Genesis 5 4.1-5.32 Sin Crouching At The Door">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\2012 Genesis 6 6.1-7.24 God Saves Noah">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
