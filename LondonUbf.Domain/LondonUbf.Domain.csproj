@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Book.cs" />
     <Compile Include="ExceptionLogger.cs" />
     <Compile Include="FileContentParser.cs" />
     <Compile Include="FileNameParser.cs" />
@@ -54,6 +55,7 @@
     <Compile Include="Repositories\MessageRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceMessage.cs" />
+    <Compile Include="ViewModels\MessageViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

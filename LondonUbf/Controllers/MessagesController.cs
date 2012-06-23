@@ -1,7 +1,9 @@
-﻿using System.Web.Mvc;
+﻿using System.Linq;
+using System.Web.Mvc;
 using Castle.Core.Logging;
 using LondonUbf.Domain;
 using LondonUbf.Domain.Repositories;
+using LondonUbf.Domain.ViewModels;
 using LondonUbf.Models;
 
 namespace LondonUbf.Controllers
@@ -16,9 +18,13 @@ namespace LondonUbf.Controllers
             _messageRepository = messageRepository;
         }
 
-        public ActionResult Index()
+        public ActionResult Index(string id = "")
         {
-            var viewModel = new MessageViewModel { Messages = _messageRepository.FindAll() };
+            var viewModel = new MessageViewModel
+                                {
+                                    Messages = string.IsNullOrEmpty(id) ? _messageRepository.FindAllMessages() : _messageRepository.FindMessagesBy(id),
+                                    Books = _messageRepository.FindAllBooks().ToList()
+                                };
 
             return View(viewModel);
         }

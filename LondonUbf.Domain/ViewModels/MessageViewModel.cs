@@ -1,10 +1,10 @@
 using System.Collections.Generic;
-using LondonUbf.Domain;
 
-namespace LondonUbf.Models
+namespace LondonUbf.Domain.ViewModels
 {
     public class MessageViewModel
     {
         public IEnumerable<ServiceMessage> Messages { get; set; }
+        public IEnumerable<Book> Books { get; set; }
     }
 }

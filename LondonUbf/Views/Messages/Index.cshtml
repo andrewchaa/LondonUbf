@@ -1,4 +1,4 @@
-﻿@model LondonUbf.Models.MessageViewModel
+﻿@model LondonUbf.Domain.ViewModels.MessageViewModel
 
 @{
     ViewBag.Title = "Messages";
@@ -28,6 +28,13 @@
 </div>
 
 <div class="row">
+    <div class="span3">
+      <div style="float:left; padding: 5px">@Html.ActionLink("All", "Index", new { controller = "Messages", id = string.Empty }, new { Class = "btn btn-primary"})</div>
+      @foreach (var book in Model.Books)
+      {
+        <div style="float:left; padding: 5px">@Html.ActionLink(book.Name, "Index", new { controller = "Messages", id = book.Name }, new { Class = "btn btn-info"})</div>
+      }
+    </div>
     <div class="span9">
       <table class="table table-striped table-bordered">
         <thead>

@@ -11,23 +11,39 @@ namespace LondonUbf.Test.Integration
     [TestFixture]
     public class MessageRepositoryTest
     {
-        private MessageRepository _repository;
-        const string _messagePath = @".\TestData";
+        private IMessageRepository _repository;
+        const string MessagePath = @".\TestData";
 
 
         [SetUp]
         public void BeforeEachTest()
         {
-            _repository = new MessageRepository(new FileNameParser(), _messagePath);
+            _repository = new MessageRepository(new FileNameParser(), MessagePath);
         }
 
         [Test]
         public void Should_List_Files_In_The_Message_Directory()
         {
-            
-            var messages = _repository.FindAll();
+            var messages = _repository.FindAllMessages();
 
             Assert.That(messages.Count(), Is.GreaterThan(0));
+        }
+
+        [Test]
+        public void Should_Filter_Messages_By_Book()
+        {
+            var messages = _repository.FindMessagesBy("Genesis");
+
+            Assert.That(messages.Count(), Is.GreaterThan(0));
+            Assert.That(messages.Any(m => m.Book != "Genesis"), Is.False);
+        }
+
+        [Test]
+        public void Should_List_Books_Out_Of_Messages()
+        {
+            var books = _repository.FindAllBooks();
+
+            Assert.That(books.First().Name, Is.EqualTo("1John"));
         }
 
         [Test]

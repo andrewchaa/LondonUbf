@@ -18,7 +18,7 @@ namespace LondonUbf.Domain.Repositories
             _directory = new DirectoryInfo(_messageDirectory);
         }
 
-        public IEnumerable<ServiceMessage> FindAll()
+        public IEnumerable<ServiceMessage> FindAllMessages()
         {
             var files = _directory.GetFiles();
 
@@ -42,6 +42,16 @@ namespace LondonUbf.Domain.Repositories
             message.Content = File.ReadAllText(Path.Combine(_messageDirectory, fileName));
 
             return message;
+        }
+
+        public IEnumerable<Book> FindAllBooks()
+        {
+            return FindAllMessages().GroupBy(m => m.Book).Select(g => new Book() { Name = g.Key });
+        }
+
+        public IEnumerable<ServiceMessage> FindMessagesBy(string book)
+        {
+            return FindAllMessages().Where(m => m.Book.ToLower() == book.ToLower());
         }
     }
 }
