@@ -671,3 +671,30 @@ ERROR 66 Default - <p><strong>23/06/2012 21:04:44: The controller for path '/fav
    at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
    at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
    at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)</p>
+INFO 13 LondonUbf.Domain.ExceptionLogger - <p>23/06/2012 23:24:01: MessageRepository.FindAllMessages,  Message:  </p>
+INFO 13 LondonUbf.Domain.ExceptionLogger - <p>23/06/2012 23:24:01: MessageRepository.FindAllBooks,  Message:  </p>
+INFO 7 LondonUbf.Domain.ExceptionLogger - <p>23/06/2012 23:24:39: MessageRepository.FindAllMessages,  Message:  </p>
+INFO 7 LondonUbf.Domain.ExceptionLogger - <p>23/06/2012 23:24:40: MessageRepository.FindAllBooks,  Message:  </p>
+INFO 12 LondonUbf.Domain.ExceptionLogger - <p>23/06/2012 23:24:43: MessageRepository.FindMessagesBy,  Message: Acts </p>
+INFO 12 LondonUbf.Domain.ExceptionLogger - <p>23/06/2012 23:24:43: MessageRepository.FindAllBooks,  Message:  </p>
+INFO 8 LondonUbf.Domain.ExceptionLogger - <p>23/06/2012 23:24:58: MessageRepository.Find,  Message: 2010 Acts 12 14.1-28 Remain True To The Faith, Paul's First Missionary Journey (2) </p>
+INFO 13 LondonUbf.Domain.ExceptionLogger - <p>23/06/2012 23:25:01: MessageRepository.FindAllMessages,  Message:  </p>
+INFO 13 LondonUbf.Domain.ExceptionLogger - <p>23/06/2012 23:25:01: MessageRepository.FindAllBooks,  Message:  </p>
+INFO 7 LondonUbf.Domain.ExceptionLogger - <p>23/06/2012 23:25:12: MessageRepository.Find,  Message: 2010 Acts 15 17.1 Do Not Be Afraid; Keep On Speaking, Paul's Second Missionary Journey (2) </p>
+INFO 15 LondonUbf.Domain.ExceptionLogger - <p>23/06/2012 23:25:16: MessageRepository.FindAllMessages,  Message:  </p>
+INFO 15 LondonUbf.Domain.ExceptionLogger - <p>23/06/2012 23:25:16: MessageRepository.FindAllBooks,  Message:  </p>
+INFO 13 LondonUbf.Domain.ExceptionLogger - <p>23/06/2012 23:25:34: MessageRepository.FindAllMessages,  Message:  </p>
+INFO 13 LondonUbf.Domain.ExceptionLogger - <p>23/06/2012 23:25:34: MessageRepository.FindAllBooks,  Message:  </p>
+ERROR 8 Default - <p><strong>23/06/2012 23:25:34: The controller for path '/favicon.ico' could not be found.</strong><br />   at LondonUbf.Infrastructure.WindsorControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType) in C:\Users\Andrew\Projects\LondonUbf\LondonUbf\Infrastructure\WindsorControllerFactory.cs:line 27
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.<>c__DisplayClass6.<BeginProcessRequest>b__2()
+   at System.Web.Mvc.SecurityUtil.<>c__DisplayClassb`1.<ProcessInApplicationTrust>b__a()
+   at System.Web.Mvc.SecurityUtil.<GetCallInAppTrustThunk>b__0(Action f)
+   at System.Web.Mvc.SecurityUtil.ProcessInApplicationTrust(Action action)
+   at System.Web.Mvc.SecurityUtil.ProcessInApplicationTrust[TResult](Func`1 func)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)</p>

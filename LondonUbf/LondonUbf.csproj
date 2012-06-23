@@ -258,6 +258,26 @@
   <ItemGroup>
     <Content Include="Views\Home\Sitemap.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\messages\2010 Acts 1 1.1-26 You Will Be My Witnesses" />
+    <Content Include="Content\messages\2010 Acts 10 11.19-12.25 The Church At Antioch" />
+    <Content Include="Content\messages\2010 ACTS 11 13.1-52 Set Apart For Me Barnabas And Saul, Paul%27s 1St Missionary Journey" />
+    <Content Include="Content\messages\2010 Acts 12 14.1-28 Remain True To The Faith, Paul%27s First Missionary Journey %282%29" />
+    <Content Include="Content\messages\2010 Acts 13 15.1-35 Salvation Through The Grace Of Our Lord Jesus" />
+    <Content Include="Content\messages\2010 Acts 14 15.36-16.40 Paul%27s Vision Of A Macedonian, Paul%27s Second Missionary Journey %281%29" />
+    <Content Include="Content\messages\2010 Acts 15 17.1 Do Not Be Afraid%3b Keep On Speaking, Paul%27s Second Missionary Journey %282%29" />
+    <Content Include="Content\messages\2010 Acts 16 18.23 The Word Of God Grew In Power, Paul%27s Third Missionary Journey %281%29" />
+    <Content Include="Content\messages\2010 Acts 17 20.1-21.26 Paul, A Man Of Mission, Paul%27s Third Missionary Journey %28Ii%29" />
+    <Content Include="Content\messages\2010 Acts 18 24.1 All People May Become What I Am" />
+    <Content Include="Content\messages\2010 Acts 19 24.1-26.32 All People May Become What I Am" />
+    <Content Include="Content\messages\2010 Acts 20 27.1-28.31 Paul In His Rented House" />
+    <Content Include="Content\messages\2010 Acts 3 3.1-26 In The Name Of Jesus Christ Of Nazareth, Walk!" />
+    <Content Include="Content\messages\2010 Acts 5 4.32-5.42 Tell The People The Full Message Of This New Life" />
+    <Content Include="Content\messages\2010 Acts 6 6.1-7.60 Stephen, The First Martyr" />
+    <Content Include="Content\messages\2010 Acts 7 8. The Gospel Work In Samaria" />
+    <Content Include="Content\messages\2010 Acts 8 9.1-43 This Man Is My Chosen Instrument" />
+    <Content Include="Content\messages\2010 Acts 9 10.1-11.18 Holy Spirit Came On All Who Heard The Message" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

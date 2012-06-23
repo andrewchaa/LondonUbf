@@ -17,8 +17,8 @@ namespace LondonUbf.Domain
             var lines = CleanUp(content);
 
             string[] yearBookLectureNoline = lines[0].Split(' ');
-            message.Year = yearBookLectureNoline.Length >= 3 ? ParseInt(yearBookLectureNoline[0]) : 0;
-            message.Book = yearBookLectureNoline.Length >= 3 ? yearBookLectureNoline[1] : "{Book}";
+            message.Year = yearBookLectureNoline.Length >= 1 ? ParseInt(yearBookLectureNoline[0]) : 0;
+            message.Book = yearBookLectureNoline.Length >= 2 ? yearBookLectureNoline[1] : "{Book}";
             message.LectureNo = yearBookLectureNoline.Length >= 3 ? ParseInt(yearBookLectureNoline[2]) : 0;
 
             message.Title = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(lines[1].Trim().ToLower());

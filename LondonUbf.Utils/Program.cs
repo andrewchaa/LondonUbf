@@ -19,11 +19,18 @@ namespace LondonUbf.Utils
 
             foreach (var file in files)
             {
-                string content = File.ReadAllText(file.FullName);
+                string content = CleanUpContent(File.ReadAllText(file.FullName));
 
                 var message = _parser.Parse(content);
                 WriteMesaageFile(message, content);
             }
+        }
+
+        private static string CleanUpContent(string input)
+        {
+            return input
+                .Replace("\t", "    ")
+                .Replace("�", "'");
         }
 
         private static void WriteMesaageFile(ServiceMessage message, string content)
@@ -37,8 +44,8 @@ namespace LondonUbf.Utils
             if (string.IsNullOrEmpty(message.Title))
                 message.Title = "{Title}";
 
-            string fileName = string.Format("c:\\temp\\{0} {1} {2} {3} {4}", message.Year, message.Book, message.LectureNo,
-                                            CleanUpForFileName(message.Chapter), CleanUpForFileName(message.Title));
+            string fileName = string.Format("c:\\temp\\{0} {1} {2} {3} {4}", message.Year, message.Book, message.LectureNo, CleanUpForFileName(message.Chapter), 
+                CleanUpForFileName(message.Title));
             File.WriteAllText(fileName, content);
         }
 
