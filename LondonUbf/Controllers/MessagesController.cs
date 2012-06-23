@@ -31,7 +31,8 @@ namespace LondonUbf.Controllers
 
         public ActionResult Read(string id)
         {
-            var message = _messageRepository.Find(id);
+            string fileName = id.Replace('_', ' ');
+            var message = _messageRepository.Find(fileName);
            
             return View(message);
         }

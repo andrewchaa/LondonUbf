@@ -52,7 +52,7 @@
                 <td>@message.Book</td>
                 <td>@message.LectureNo</td>
                 <td>@message.Chapter</td>
-                <td>@Html.ActionLink(message.Title, "Read", new { id = message.FileName })</td>
+                <td>@Html.ActionLink(message.Title, "Read", new { id = Model.RenderUrlFrom(message.FileName) })</td>
             </tr>
           }
         </tbody>
