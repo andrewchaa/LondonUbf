@@ -1,5 +1,6 @@
 ﻿@model LondonUbf.Domain.ViewModels.MessageViewModel
 @{
+    string urlHost = "http://www.londonubf.org.uk";
     Layout = null;
     Response.ContentType = "text/xml";
 }
@@ -11,13 +12,13 @@
       http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 
-<url><loc>@Url.Action("Index", "Home", null, "http")</loc></url>
-<url><loc>@Url.Action("About", "Home", null, "http")</loc></url>
-<url><loc>@Url.Action("Index", "Messages", null, "http")</loc></url>
+<url><loc>@urlHost@Url.Action("Index", "Home")</loc></url>
+<url><loc>@urlHost@Url.Action("About", "Home")</loc></url>
+<url><loc>@urlHost@Url.Action("Index", "Messages")</loc></url>
 
 @foreach (var message in Model.Messages)
 {
-    <url><loc>@Url.Action("Read", "Messages", new { id = Model.RenderUrlFrom(message.FileName) }, "http")</loc></url>
+    <url><loc>@urlHost@Url.Action("Read", "Messages", new { id = Model.RenderUrlFrom(message.FileName) })</loc></url>
 }
 
 </urlset>
