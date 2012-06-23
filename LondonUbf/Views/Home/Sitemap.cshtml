@@ -16,6 +16,11 @@
 <url><loc>@urlHost@Url.Action("About", "Home")</loc></url>
 <url><loc>@urlHost@Url.Action("Index", "Messages")</loc></url>
 
+@foreach (var book in Model.Books)
+{
+    <url><loc>@urlHost@Url.Action("Index", "Messages", new { id = book.Name })</loc></url>
+}
+
 @foreach (var message in Model.Messages)
 {
     <url><loc>@urlHost@Url.Action("Read", "Messages", new { id = Model.RenderUrlFrom(message.FileName) })</loc></url>
