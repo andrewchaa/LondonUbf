@@ -28,6 +28,12 @@ namespace LondonUbf
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                "SiteMap", //Route name
+                "sitemap.xml", //URL,
+                new { controller = "Home", action = "Sitemap" } // Parameter defaults
+                );
+
+            routes.MapRoute(
                 "Default", // Route name
                 "{controller}/{action}/{id}", // URL with parameters
                 new { controller = "Home", action = "Index", id = UrlParameter.Optional } // Parameter defaults

@@ -1,0 +1,23 @@
+﻿@model LondonUbf.Domain.ViewModels.MessageViewModel
+@{
+    Layout = null;
+    Response.ContentType = "text/xml";
+}
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+      http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+
+<url><loc>@Url.Action("Index", "Home", null, "http")</loc></url>
+<url><loc>@Url.Action("About", "Home", null, "http")</loc></url>
+<url><loc>@Url.Action("Index", "Messages", null, "http")</loc></url>
+
+@foreach (var message in Model.Messages)
+{
+    <url><loc>@Url.Action("Read", "Messages", new { id = Model.RenderUrlFrom(message.FileName) }, "http")</loc></url>
+}
+
+</urlset>
