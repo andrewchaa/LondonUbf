@@ -17,14 +17,15 @@
 
 <style>
     .hero-unit h1, .hero-unit p {
-        color: Olive;
+        /* color: Olive; */
     }
 </style>
 
 <!-- Main hero unit for a primary marketing message or call to action -->
-<div class="hero-unit" style="background-image:url(/Content/images/dove.jpg)">
+@*<div class="hero-unit" style="background-image:url(/Content/images/dove.jpg)">*@
+<div class="hero-unit">
   <h1>Messages</h1>
-  <p>You can revisit all the message we have heard on the service.</p>
+  <p>You can revisit all the message you had on the services.</p>
 </div>
 
 <div class="row">
@@ -60,3 +61,8 @@
     </div>
 </div>
 
+<script type="text/javascript">
+    $(function () {
+        $('.hero-unit').css('background-image', 'url(/Content/images/bible.jpg)');
+    });
+</script>

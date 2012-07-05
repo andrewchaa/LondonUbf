@@ -14,9 +14,11 @@
 }
 
 <!-- Main hero unit for a primary marketing message or call to action -->
-<div class="hero-unit" style="background-image:url(/Content/images/sky.jpg)">
+@*<div class="hero-unit" style="background-image:url(/Content/images/sky.jpg)">*@
+<div class="hero-unit">
     <h1>Welcome to church!</h1>
     <h2>London University Bible Fellowship</h2>
+    <p><a class="btn btn-info" href='@Url.Action("Index", "Messages")'>Messages &raquo;</a></p>
 </div>
 
 <!-- Example row of columns -->
@@ -51,3 +53,8 @@
 </div>
 
 
+<script type="text/javascript">
+    $(function () {
+        $('.hero-unit').css('background-image', 'url(/Content/images/sky.jpg)');
+    });
+</script>
