@@ -12,18 +12,29 @@
       http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 
-<url><loc>@urlHost@Url.Action("Index", "Home")</loc></url>
-<url><loc>@urlHost@Url.Action("About", "Home")</loc></url>
-<url><loc>@urlHost@Url.Action("Index", "Messages")</loc></url>
+    <url><loc>@urlHost@Url.Action("Index", "Home")</loc><priority>0.8</priority></url>
+    <url><loc>@urlHost@Url.Action("About", "Home")</loc><priority>0.8</priority></url>
+    <url>
+        <loc>@urlHost@Url.Action("Index", "Messages")</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
 
 @foreach (var book in Model.Books)
 {
-    <url><loc>@urlHost@Url.Action("Index", "Messages", new { id = book.Name })</loc></url>
+    <url>
+        <loc>@urlHost@Url.Action("Index", "Messages", new { id = book.Name })</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
 }
 
 @foreach (var message in Model.Messages)
 {
-    <url><loc>@urlHost@Url.Action("Read", "Messages", new { id = Model.RenderUrlFrom(message.FileName) })</loc></url>
+    <url>
+        <loc>@urlHost@Url.Action("Read", "Messages", new { id = Model.RenderUrlFrom(message.FileName) })</loc>
+        <priority>0.9</priority>
+    </url>
 }
 
 </urlset>
