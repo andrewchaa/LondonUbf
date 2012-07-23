@@ -1,0 +1,17 @@
+﻿@{ ViewBag.Title = string.Format("What's on {0}", DateTime.Today.Year); }
+
+<style>
+    .hero-unit h1, .hero-unit p { color: Olive; }
+</style>
+
+
+<div class="hero-unit">
+  <h1>@string.Format("What's on {0}", DateTime.Today.Year)</h1>
+</div>
+
+
+<script type="text/javascript">
+    $(function () {
+        $('.hero-unit').css('background-image', 'url(/Content/images/sky.jpg)');
+    });
+</script>

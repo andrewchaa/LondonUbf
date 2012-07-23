@@ -25,6 +25,11 @@ namespace LondonUbf.Controllers
             return View();
         }
 
+        public ActionResult Schedules()
+        {
+            return View();
+        }
+
         public ActionResult Sitemap()
         {
             var messageViewModel = new MessageViewModel

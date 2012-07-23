@@ -278,6 +278,9 @@
     <Content Include="Content\messages\2010 Acts 8 9.1-43 This Man Is My Chosen Instrument" />
     <Content Include="Content\messages\2010 Acts 9 10.1-11.18 Holy Spirit Came On All Who Heard The Message" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Schedules.cshtml" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
