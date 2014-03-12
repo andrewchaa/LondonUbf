@@ -1,6 +1,11 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{7952E6A4-BD64-4807-AD5E-5207E1794C8A}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LondonUbf", "LondonUbf\LondonUbf.csproj", "{4FD022EB-F92A-4B85-A986-73DAA6F5B4AF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LondonUbf.Test", "LondonUbf.Test\LondonUbf.Test.csproj", "{66CC80D1-9E44-4615-87B0-1F53B33F5D46}"
@@ -8,11 +13,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LondonUbf.Utils", "LondonUbf.Utils\LondonUbf.Utils.csproj", "{AA907EDB-8091-440E-8AE0-99F17FF63633}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LondonUbf.Domain", "LondonUbf.Domain\LondonUbf.Domain.csproj", "{0C36ACF8-BBFB-45E9-A9CC-371539B170EA}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{7952E6A4-BD64-4807-AD5E-5207E1794C8A}"
-	ProjectSection(SolutionItems) = preProject
-		.nuget\packages.config = .nuget\packages.config
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
